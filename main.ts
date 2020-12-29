@@ -27,6 +27,7 @@ basic.forever(function () {
 basic.forever(function () {
     sonar = cuteBot.ultrasonic(cuteBot.SonarUnit.Centimeters)
     radio.sendValue("sonar", sonar)
+    radio.sendValue("light", input.lightLevel())
     basic.pause(100)
 })
 basic.forever(function () {
