@@ -8,7 +8,7 @@ basic.showLeds(`
     `)
 basic.forever(function () {
     sonar = cuteBot.ultrasonic(cuteBot.SonarUnit.Centimeters)
-    if (sonar > 15) {
+    if (sonar > 5 && sonar < 15) {
         if (cuteBot.tracking(cuteBot.TrackingState.L_unline_R_line)) {
             cuteBot.motors(50, 25)
         }
