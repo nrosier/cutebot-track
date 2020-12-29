@@ -9,7 +9,7 @@ basic.showLeds(`
     `)
 basic.pause(2000)
 basic.forever(function () {
-    if (sonar > 10) {
+    if (sonar > 10 || sonar == 0) {
         if (cuteBot.tracking(cuteBot.TrackingState.L_unline_R_line)) {
             cuteBot.motors(50, 25)
         }
