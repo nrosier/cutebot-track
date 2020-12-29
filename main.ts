@@ -8,6 +8,7 @@ basic.showLeds(`
     . # . . .
     `)
 basic.pause(2000)
+// Driving logic
 basic.forever(function () {
     if (sonar > 10 || sonar == 0) {
         if (cuteBot.tracking(cuteBot.TrackingState.L_unline_R_line)) {
@@ -27,4 +28,11 @@ basic.forever(function () {
     sonar = cuteBot.ultrasonic(cuteBot.SonarUnit.Centimeters)
     radio.sendValue("sonar", sonar)
     basic.pause(100)
+})
+basic.forever(function () {
+    if (input.lightLevel() < 10) {
+        cuteBot.colorLight(cuteBot.RGBLights.ALL, 0xffffff)
+    } else {
+        cuteBot.colorLight(cuteBot.RGBLights.ALL, 0x000000)
+    }
 })
