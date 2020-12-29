@@ -6,7 +6,8 @@
         "core": "*",
         "radio": "*",
         "microphone": "*",
-        "cutebot": "github:elecfreaks/pxt-cutebot#v4.1.0"
+        "cutebot": "github:elecfreaks/pxt-cutebot#v4.1.0",
+        "microbit-pxt-timeanddate": "github:bsiever/microbit-pxt-timeanddate#v2.0.11"
     },
     "files": [
         "README.md",
